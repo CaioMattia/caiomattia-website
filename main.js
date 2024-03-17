@@ -9,3 +9,7 @@ function about(){
 function portfolio(){
     window.location.href= 'portfolio.html';
 }
+
+function quiz(){
+    window.location.href= 'https://5ain-quiz.vercel.app/';
+}
