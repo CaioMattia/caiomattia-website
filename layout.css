@@ -1,54 +1,62 @@
+/* Estiliza o corpo da página */
 body {
-  background-color: rgb(17, 17, 24);
-  margin: 0;
-  font-family: 'Quicksand';
+  background-color: rgb(17, 17, 24);  /* Cor de fundo escura */
+  margin: 0;                          /* Remove margens padrão */
+  font-family: 'Quicksand';          /* Fonte suave e moderna */
 }
 
+/* Estiliza o título principal */
 h1 {
-  color: white;
+  color: white;                      /* Cor branca para o texto */
 }
 
+/* Estiliza os parágrafos */
 p {
-  font-size: 20px;
+  font-size: 20px;                   /* Tamanho da fonte para leitura confortável */
 }
 
-img{
-	margin-top: 25px;
-	display: block;
+/* Espaçamento acima de imagens */
+img {
+  margin-top: 25px;                  /* Distância entre a imagem e o conteúdo acima dela */
 }
 
+/* Centraliza o conteúdo onde essa classe é aplicada */
 .center {
   text-align: center;
 }
 
+/* Permite que o texto seja tratado como bloco, mas fique na mesma linha */
 .text {
   display: inline-block;
 }
 
+/* Estiliza o cabeçalho da página */
 .header {
-  overflow: hidden;
-  background-color: rgb(8, 8, 12);
-  padding: 20px 10px;
-  text-align: center;
+  overflow: hidden;                  /* Evita que elementos escapem do contêiner */
+  background-color: rgb(8, 8, 12);   /* Cor de fundo ainda mais escura que o corpo */
+  padding: 20px 10px;                /* Espaçamento interno (vertical, horizontal) */
+  text-align: center;               /* Centraliza o conteúdo */
 }
 
+/* Botão principal: escuro com bordas arredondadas */
 .button {
-  background-color: rgb(20, 20, 26);
-  border: none;
-  color: white;
-  padding: 15px 32px;
+  background-color: rgb(20, 20, 26); /* Cor escura para contraste com fundo */
+  border: none;                      /* Sem bordas visíveis */
+  color: white;                      /* Texto branco */
+  padding: 15px 32px;                /* Tamanho do botão */
   text-align: center;
-  text-decoration: none;
+  text-decoration: none;             /* Remove sublinhado padrão */
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 12%;
+  margin: 4px 2px;                   /* Espaço entre múltiplos botões */
+  cursor: pointer;                   /* Cursor de mão ao passar o mouse */
+  border-radius: 12%;                /* Arredonda as bordas (pode parecer oval dependendo do tamanho) */
   font-family: 'Quicksand';
 }
 
+/* Variação de botão com cor diferente */
 .button2 {
-  background-color: rgb(85,85,85);
+  background-color: rgb(85, 85, 85); /* Cinza médio para contraste com o botão original */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -62,8 +70,9 @@ img{
   font-family: 'Quicksand';
 }
 
+/* Estiliza um link para GitHub ou outros botões de link */
 .github-link {
-  margin-top: 20px;
-  color: #fff;
-  text-decoration: none;
+  margin-top: 20px;                 /* Espaço acima do link */
+  color: #fff;                      /* Texto branco */
+  text-decoration: none;           /* Remove o sublinhado */
 }
