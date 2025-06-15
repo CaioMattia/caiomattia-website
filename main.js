@@ -13,3 +13,7 @@ function portfolio(){
 function quiz(){
     window.location.href= 'https://5ain-quiz.vercel.app/';
 }
+
+function game(){
+    window.location.href= 'https://mattiadev.itch.io/loveletter';
+}
