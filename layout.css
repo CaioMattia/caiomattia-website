@@ -1,78 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 /* Estiliza o corpo da página */
 body {
-  background-color: rgb(17, 17, 24);  /* Cor de fundo escura */
-  margin: 0;                          /* Remove margens padrão */
-  font-family: 'Quicksand';          /* Fonte suave e moderna */
+  background-color: #0e0e14; /* Fundo escuro e suave */
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
 }
 
-/* Estiliza o título principal */
+/* Título principal */
 h1 {
-  color: white;                      /* Cor branca para o texto */
+  color: #e4e4ec;
 }
 
-/* Estiliza os parágrafos */
+/* Parágrafos */
 p {
-  font-size: 20px;                   /* Tamanho da fonte para leitura confortável */
+  font-size: 20px;
+  color: #e4e4ec;
 }
 
-/* Espaçamento acima de imagens */
+/* Espaçamento acima das imagens */
 img {
-  margin-top: 25px;                  /* Distância entre a imagem e o conteúdo acima dela */
+  margin-top: 25px;
 }
 
-/* Centraliza o conteúdo onde essa classe é aplicada */
+/* Centralização de conteúdo */
 .center {
   text-align: center;
 }
 
-/* Permite que o texto seja tratado como bloco, mas fique na mesma linha */
 .text {
   display: inline-block;
 }
 
-/* Estiliza o cabeçalho da página */
+/* Cabeçalho da página */
 .header {
-  overflow: hidden;                  /* Evita que elementos escapem do contêiner */
-  background-color: rgb(8, 8, 12);   /* Cor de fundo ainda mais escura que o corpo */
-  padding: 20px 10px;                /* Espaçamento interno (vertical, horizontal) */
-  text-align: center;               /* Centraliza o conteúdo */
-}
-
-/* Botão principal: escuro com bordas arredondadas */
-.button {
-  background-color: rgb(20, 20, 26); /* Cor escura para contraste com fundo */
-  border: none;                      /* Sem bordas visíveis */
-  color: white;                      /* Texto branco */
-  padding: 15px 32px;                /* Tamanho do botão */
+  overflow: hidden;
+  background-color: #12121a; /* Cor uniforme ao fundo */
+  padding: 20px 10px;
   text-align: center;
-  text-decoration: none;             /* Remove sublinhado padrão */
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;                   /* Espaço entre múltiplos botões */
-  cursor: pointer;                   /* Cursor de mão ao passar o mouse */
-  border-radius: 12%;                /* Arredonda as bordas (pode parecer oval dependendo do tamanho) */
-  font-family: 'Quicksand';
 }
 
-/* Variação de botão com cor diferente */
-.button2 {
-  background-color: rgb(85, 85, 85); /* Cinza médio para contraste com o botão original */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 12%;
-  font-family: 'Quicksand';
-}
-
-/* Estiliza um link para GitHub ou outros botões de link */
+/* Links como botão ou GitHub */
 .github-link {
-  margin-top: 20px;                 /* Espaço acima do link */
-  color: #fff;                      /* Texto branco */
-  text-decoration: none;           /* Remove o sublinhado */
+  margin-top: 20px;
+  color: #e4e4ec;
+  text-decoration: none;
+}
+
+/* Botão animado */
+.button {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+/* Sombra */
+.button .shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+/* Borda com gradiente */
+.button .edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(
+    to left,
+    hsl(250, 20%, 15%) 0%,
+    hsl(250, 20%, 30%) 8%,
+    hsl(250, 20%, 30%) 92%,
+    hsl(250, 20%, 15%) 100%
+  );
+}
+
+/* Frente do botão */
+.button .front {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  font-size: 1.25rem;
+  color: #e4e4ec;
+  background: hsl(250, 20%, 18%);
+  border-radius: 8px;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+/* Hover e brilho */
+.button:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+  box-shadow: 0 0 10px rgba(200, 180, 255, 0.15);
+}
+
+/* Pressionado */
+.button:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+/* Foco visível */
+.button:focus .front {
+  outline: 2px solid #8873ff;
+  outline-offset: 2px;
+}
+
+/* Não permitir seleção de texto */
+.button .front span {
+  user-select: none;
+}
+
+/* Responsivo para mobile */
+@media (max-width: 600px) {
+  p {
+    font-size: 16px;
+  }
+
+  .button .front {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 }
