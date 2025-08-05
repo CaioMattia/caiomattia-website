@@ -14,20 +14,31 @@ p {
   font-size: 20px;
 }
 
-img {
+.img1 {
   margin-top: 25px;
   margin-right: 25px
+}
+.img2 {
+  margin-top: 25px;
+  margin-right: 10px
 }
 
 .center {
   text-align: center;
 }
 
-.text {
+
+.textH {
   display: inline-block;
   position: relative;
   top: -100px
 
+}
+
+.textS {
+  display: inline-block;
+  position: relative;
+  top: 80px
 }
 
 .header {
@@ -35,6 +46,7 @@ img {
   background-color: #1a1a26;
   padding: 20px 10px;
   text-align: center;
+  height: 42px;
 }
 
 .github-link {
